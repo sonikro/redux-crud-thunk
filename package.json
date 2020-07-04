@@ -1,6 +1,6 @@
 {
   "name": "redux-crud-thunk",
-  "version": "1.0.0",
+  "version": "1.1.0-1",
   "description": "Toolkit to help with the creation of Redux CRUD Actions and Reducers",
   "main": "dist/index.js",
   "scripts": {
