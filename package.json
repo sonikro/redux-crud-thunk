@@ -1,0 +1,29 @@
+{
+  "name": "redux-crud-thunk",
+  "version": "1.0.0",
+  "description": "Toolkit to help with the creation of Redux CRUD Actions and Reducers",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "npm test",
+    "build": "tsc",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sonikro/redux-crud-thunk.git"
+  },
+  "keywords": [
+    "redux",
+    "thunk",
+    "crud"
+  ],
+  "author": "sonikro",
+  "license": "ISC",
+  "devDependencies": {
+    "@reduxjs/toolkit": "^1.4.0",
+    "typescript": "^3.9.6"
+  },
+  "peerDependencies": {
+    "@reduxjs/toolkit": "^1.4.0"
+  }
+}
