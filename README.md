@@ -127,7 +127,7 @@ const initialState: UserSlice = {
 
 ```
 
-Now, we in order to create all the necessary Thunk Actions, let's use the helper function *createCrudThunks*
+Now, in order to create all the necessary Thunk Actions, let's use the helper function *createCrudThunks*
 
 ```typescript
 export const userActions = createCrudThunks<User>({
