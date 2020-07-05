@@ -3,6 +3,7 @@
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=redux-crud-thunk&metric=alert_status)](https://sonarcloud.io/dashboard?id=redux-crud-thunk)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=redux-crud-thunk&metric=bugs)](https://sonarcloud.io/dashboard?id=redux-crud-thunk)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=redux-crud-thunk&metric=coverage)](https://sonarcloud.io/dashboard?id=redux-crud-thunk)
+
 This is a library with helper functions for dealing with standard CRUD Operations on REST Based apis.
 
 ## The Problem
