@@ -1,19 +1,13 @@
+import { configureStore, createSlice, Slice, Store } from "@reduxjs/toolkit";
+import thunk from "redux-thunk";
 import {
   createCrudThunks,
-  EntityService,
-  ListParameters,
   CrudThunks,
+  EntityService,
   EntityState,
+  ListParameters,
   registerCrudReducers,
 } from "..";
-import {
-  configureStore,
-  createSlice,
-  Slice,
-  Store,
-  disp,
-} from "@reduxjs/toolkit";
-import thunk from "redux-thunk";
 
 interface User {
   id?: string;
@@ -105,24 +99,31 @@ describe("createCrudThunks", () => {
 
   it("updates users when update action is dispatched", async () => {
     await store.dispatch(userActions.list({}) as any); //Populate array first
-    return store.dispatch(userActions.update({id: "10", name: "Updated User"}) as any).then(() => {
-      expect(store.getState().user.entityList).toContainEqual({
-        id: "10",
-        name: "Updated User",
+    return store
+      .dispatch(userActions.update({ id: "10", name: "Updated User" }) as any)
+      .then(() => {
+        expect(store.getState().user.entityList).toContainEqual({
+          id: "10",
+          name: "Updated User",
+        });
       });
-    });
   });
 
   it("deletes users when delete action is dispatched", async () => {
     await store.dispatch(userActions.list({}) as any); //Populate array first
-    return store.dispatch(userActions.delete({id: "10", name: "Existing User"}) as any).then(() => {
-      expect(store.getState().user.entityList).toHaveLength(0);
-    });
+    return store
+      .dispatch(userActions.delete({ id: "10", name: "Existing User" }) as any)
+      .then(() => {
+        expect(store.getState().user.entityList).toHaveLength(0);
+      });
   });
 
   it("get user when get action is dispatched", async () => {
     return store.dispatch(userActions.get("10") as any).then(() => {
-      expect(store.getState().user.selectedEntity).toMatchObject({id: "1", name: "Sonikro"});
+      expect(store.getState().user.selectedEntity).toMatchObject({
+        id: "1",
+        name: "Sonikro",
+      });
     });
   });
 });
