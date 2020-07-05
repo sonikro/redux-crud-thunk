@@ -27,7 +27,7 @@ export type EntityService<T, IDType> = {
   update: (entity: T) => Promise<T>;
   delete: (entity: T) => Promise<T>;
   get: (entityId: IDType) => Promise<T>;
-  createChildService: <C>(
+  createChildService?: <C>(
     parentId: string,
     childName: string
   ) => EntityService<C, IDType>;
