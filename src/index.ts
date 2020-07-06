@@ -19,6 +19,7 @@ export type ListParameters = {
   sortBy?: string;
   order?: string;
   search?: string;
+  [any: string]: any;
 };
 
 export type EntityService<T, IDType> = {
