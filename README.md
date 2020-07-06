@@ -1,4 +1,4 @@
-# react-crud-thunk 
+# redux-crud-thunk 
 ![Node.js Package](https://github.com/sonikro/redux-crud-thunk/workflows/Node.js%20Package/badge.svg)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=redux-crud-thunk&metric=alert_status)](https://sonarcloud.io/dashboard?id=redux-crud-thunk)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=redux-crud-thunk&metric=bugs)](https://sonarcloud.io/dashboard?id=redux-crud-thunk)
