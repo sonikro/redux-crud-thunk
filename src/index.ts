@@ -114,7 +114,7 @@ const operationFulfilled: Record<keyof CrudThunks<any, any>, any> = {
   },
   delete: <T extends { id: string }>(payload: T, state: EntityState<T>) => {
     state.entityList.splice(
-      state.entityList.findIndex((entity) => entity.id === payload.id)
+      state.entityList.findIndex((entity) => entity.id === payload.id), 1
     );
   },
   get: <T>(payload: T, state: EntityState<T>) => {

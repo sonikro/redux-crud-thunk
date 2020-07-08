@@ -22,6 +22,7 @@ const MockUserService: EntityService<User, string> = {
   get: async (userId: string) => ({ id: "1", name: "Sonikro" } as User),
   list: async (params: ListParameters) => [
     { id: "10", name: "Existing User" } as User,
+    { id: "9", name: "Another User"} as User
   ],
   update: async (user: User) => user,
 };
@@ -114,7 +115,7 @@ describe("createCrudThunks", () => {
     return store
       .dispatch(userActions.delete({ id: "10", name: "Existing User" }) as any)
       .then(() => {
-        expect(store.getState().user.entityList).toHaveLength(0);
+        expect(store.getState().user.entityList).toHaveLength(1);
       });
   });
 
